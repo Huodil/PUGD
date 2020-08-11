@@ -1,0 +1,232 @@
+db.createCollection("borrowers", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "first_name", "last_name"],
+         properties: {
+            first_name: {
+               bsonType: "String",
+               description: "must be a String and is required"
+            },
+            last_name: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            Address : {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            phone: {
+               bsonType: "int",
+               description: "must be an Integer if the field exists"
+            },
+            Year_of_birth: {
+               bsonType: "int",
+               description: "must be an Integer if the field exists"
+            },
+            Gender: {
+                enum: [ "male", "female"," unspecified" ],
+               description: "must be a String if the field exists"
+            },
+            Email: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+
+            Category: {
+                enum: [ "collectivity", "Personnel"," free indivivuel" ],
+               description: "must be a String if the field exists"
+            },
+			 Status: {
+                enum: [ "Actif", "inactif"],
+               description: "must be a String if the field exists"
+            },
+            OPAC_Login: {
+              bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+
+              copy: {
+                bsonType: ["array"],
+                minItems: 1,
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a copy "
+                 }
+              },
+			  reserves: {
+                bsonType: ["array"],
+                minItems: 1,
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of  reserves "
+                 }
+              },
+			  abonnements: {
+                bsonType: ["array"],
+                minItems: 1,
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of  abonnement "
+                 }
+              },
+
+           }
+            }
+         }
+
+         })
+
+db.createCollection("Groups_Borrowers", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+                        required: [ "namegroups" ],
+                  bsonType: "object",
+                  properties: {
+                     email_group: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                     },
+                    responsable_group: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                     },
+                     adresse_group: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     date_creation: {
+                        bsonType: "int",
+                        description: "must be an Integer if the field exists"
+                     },
+					 Borrowers: {
+                bsonType: ["array"],
+                minItems: 1,
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of  borrowors "
+                 }
+              },
+
+                   },
+
+                 }
+             }
+         }
+
+db.createCollection("reserves", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "title"],
+         properties: {
+          title: {
+               bsonType: "String",
+               description: "must be a string and is required"
+            },
+            rang: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            date_prêt: {
+               bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+			 date_retour: {
+                bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+			priority: {
+               bsonType: "Integer",
+               description: "must be a Integer if the field exists"
+            },
+			prologement: {
+               bsonType: "Integer",
+               description: "must be a Integer if the field exists"
+            },
+			relance: {
+                bsonType: ["array"],
+                minItems: 1,
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of  relance "
+                 }
+              },
+
+               }
+         }
+     }
+ }
+ db.createCollection("Relance", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "title"],
+         properties: {
+          title_relance: {
+               bsonType: "String",
+               description: "must be a string and is required"
+            },
+            level_Relance: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            validity: {
+               bsonType: "boolean",
+               description: "must be a bollean if the field exists"
+            },
+			 days_relance: {
+                bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+
+
+               }
+         }
+     }
+ }
+ db.createCollection("Abonnements", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "duree_abonnement"],
+         properties: {
+          date_debut_abonn: {
+               bsonType: "int",
+               description: "must be an Integer and is required"
+            },
+            date_fin_abonn: {
+               bsonType: "date",
+               description: "must be a Date if the field exists"
+            },
+            abonnées: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+			 peridicity: {
+                bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+			code_barre_abonnement: {
+               bsonType: "Integer",
+               description: "must be a Integer if the field exists"
+            },
+			prologement: {
+               bsonType: "Integer",
+               description: "must be a Integer if the field exists"
+            },
+         }
+      }
+   }
+}

@@ -1,0 +1,53 @@
+li .collapsible-header .collapsible-icon{
+transition: .3s;
+/* line-height: 84px; */
+}
+li.active .collapsible-header .collapsible-icon{
+    transform: rotate(90deg);
+}
+.collapsible-header{
+ border-bottom: none;
+ padding: 5px;
+}
+.collapsible-body{
+ padding: 7px 30px
+}
+.material-icons{
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    -webkit-user-select: none !important;
+    -o-user-select: none !important;
+}
+.input-field label{
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    -webkit-user-select: none !important;
+    -o-user-select: none !important;
+}
+
+.recent-buyers-card .collection
+{
+    border: none;
+}
+
+.recent-buyers-card .collection .collection-item
+{
+    min-height: auto;
+    padding-left: 55px;
+
+    border-bottom: none;
+}
+
+.recent-buyers-card .collection .collection-item.avatar:not(.circle-clipper) > .circle
+{
+    left: 0;
+}
+
+.recent-buyers-card .collection .collection-item.avatar .secondary-content
+{
+    right: 0;
+
+    color: #3f51b5;
+}

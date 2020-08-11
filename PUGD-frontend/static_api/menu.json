@@ -1,0 +1,490 @@
+{
+  "acquisition": {
+    "label": "Acquisition",
+    "menu": [
+      {
+        "Label": "Purchases",
+        "Icon": "home",
+        "Children": [
+          {
+            "Label": "Providers",
+            "href": "/admin/acquisition/AllProviders"
+          },
+          {
+            "Label": "Quotations",
+            "href": "/admin/acquisition/AllQuotations"
+          },
+          {
+            "Label": "Orders",
+            "href": "/admin/acquisition/AllOrders"
+          },
+          {
+            "Label": "Receivings",
+            "href": "/admin/acquisition/AllReceiving"
+          },
+          {
+            "Label": "Deliveries",
+            "href": "/admin/acquisition/AllDelivery"
+          },
+          {
+            "Label": "Bills",
+            "href": "/admin/acquisition/AllBills"
+          },
+          {
+            "Label": "Budgets",
+            "href": "/admin/acquisition/Budgets"
+          }
+        ]
+      },
+      {
+        "Label": "Suggestions",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "Import Suggestion",
+            "href": "/admin/acquisition/ImportSugg"
+          },
+          {
+            "Label": "All Suggestions",
+            "href": "/admin/acquisition/AllSuggestions"
+          },
+          {
+            "Label": "Suggestion by reader",
+            "href": "/admin/acquisition/SuggByReader"
+          }
+        ]
+      }
+    ]
+  },
+  "administration": {
+    "label": "Administration",
+    "menu": [
+      {
+        "Label": "items",
+        "Icon": "add",
+        "Children": [
+          {
+            "Label": "Owner",
+            "href": "/admin/administration/Owner"
+          },
+          {
+            "Label": "Status",
+            "href": "/admin/administration/Status"
+          },
+          {
+            "Label": "Media Types",
+            "href": "/admin/administration/MediaTypes"
+          },
+          {
+            "Label": "Code Static",
+            "href": "/admin/administration/codeStatic"
+          }
+        ]
+      }
+    ]
+  },
+  "authorities": {
+    "label": "Authorities",
+    "menu": [
+      {
+        "Label": "Search",
+        "Icon": "search",
+        "Children": [
+          {
+            "Label": "All authorities",
+            "href": "/admin/authorities/search/all_auth"
+          },
+          {
+            "Label": "Predefined",
+            "href": "/admin/authorities/predefined"
+          }
+        ]
+      },
+      {
+        "Label": "Authorities",
+        "Icon": "settings_input_svideo",
+        "Children": [
+          {
+            "Label": "Author",
+            "href": "/admin/authorities/Author"
+          },
+          {
+            "Label": "headings",
+            "href": "/admin/authorities/headings"
+          },
+          {
+            "Label": "Publisher",
+            "href": "/admin/authorities/publisher"
+          },
+          {
+            "Label": "Series",
+            "href": "/admin/authorities/series"
+          },
+          {
+            "Label": "Sub-series",
+            "href": "/admin/authorities/sub_series"
+          },
+          {
+            "Label": "Collection Title",
+            "href": "/admin/authorities/collection_title"
+          },
+          {
+            "Label": "Uniform Titles",
+            "href": "/admin/authorities/uniform_title"
+          },
+          {
+            "Label": "Class number",
+            "href": "/admin/authorities/class_number"
+          }
+        ]
+      },
+      {
+        "Label": "Baskets",
+        "Icon": "shopping_basket",
+        "Children": [
+          {
+            "Label": "Management",
+            "href": "/admin/authorities/basket/management"
+          }
+        ]
+      },
+      {
+        "Label": "Semantic",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "Synonyms",
+            "href": "/admin/authorities/semantic/synonyms"
+          },
+          {
+            "Label": "Stopwords",
+            "href": "/admin/authorities/semantic/stopwords"
+          }
+        ]
+      }
+    ]
+  },
+  "cataloguing": {
+    "label": "Catalogue",
+    "menu": [
+      {
+        "Label": "Search",
+        "Icon": "search",
+        "Children": [
+          {
+            "Label": "All Libraries",
+            "href": "/admin/cataloguing/Library/libraries"
+          },
+          {
+            "Label": "All Branches",
+            "href": "/admin/cataloguing/Branch/branches"
+          },
+          {
+            "Label": "All Records",
+            "href": "/admin/cataloguing/Record/Records"
+          },
+          {
+            "Label": "All Copies",
+            "href": "/admin/cataloguing/Copy/copies"
+          },
+          {
+            "Label": "All Serials",
+            "href": "/admin/cataloguing/Serial/Serials"
+          },
+          {
+            "Label": "All KeyWords",
+            "href": "/admin/cataloguing/KeyWord/KeyWords"
+          },
+          {
+            "Label": "All Languages",
+            "href": "/admin/cataloguing/Language/Languages"
+          }
+        ]
+      },
+      {
+        "Label": "External",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Z39.50 ",
+            "href": "/admin/cataloguing/index"
+          }
+        ]
+      }
+    ]
+  },
+  "circulation": {
+    "label": "Circulation",
+    "menu": [
+      {
+        "Label": "Circulation",
+        "Icon": "home",
+        "Children": [
+          {
+            "Label": "Prêt de documents",
+            "href": "/admin/circulation/Circulation/pret_document"
+          },
+          {
+            "Label": "Retour de documents",
+            "href": "/admin/circulation/Circulation/retour_Document"
+          },
+          {
+            "Label": "Documents À traiter",
+            "href": "/admin/circulation/Circulation/taritDoc"
+          },
+          {
+            "Label": "Groupes de lecteurs",
+            "href": "/admin/circulation/Circulation/groups"
+          },
+          {
+            "Label": "Nouveau (Borrowers) lecteur",
+            "href": "/admin/circulation/Circulation/Borrowers"
+          },
+          {
+            "Label": "Périodiques",
+            "href": "/admin/circulation/Circulation/periodique"
+          },
+          {
+            "Label": "Recharch Personalisé",
+            "href": "/admin/circulation/Circulation/recharch"
+          }
+        ]
+      },
+      {
+        "Label": "Paniers",
+        "Icon": "shopping_basket",
+        "Children": [
+          {
+            "Label": "Author",
+            "href": "/admin/Circulation/author"
+          },
+          {
+            "Label": "headings",
+            "href": "/admin/Circulation/headings"
+          },
+          {
+            "Label": "Publisher",
+            "href": "/admin/Circulation/publisher"
+          },
+          {
+            "Label": "Series",
+            "href": "/admin/Circulation/series"
+          },
+          {
+            "Label": "Sub-series",
+            "href": "/admin/Circulation/sub_series"
+          },
+          {
+            "Label": "Collection Title",
+            "href": "/admin/Circulation/collection_title"
+          },
+          {
+            "Label": "Uniform Titles",
+            "href": "/admin/Circulation/uniform-titles"
+          },
+          {
+            "Label": "Class number",
+            "href": "/admin/Circulation/class_number"
+          }
+        ]
+      },
+      {
+        "Label": "Réservations",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "Reservation Encour",
+            "href": "/admin/circulation/Reservation/En_cour"
+          },
+          {
+            "Label": "Reservation depassé",
+            "href": "/admin/Circulation/Reservation/Depasse"
+          }
+        ]
+      },
+      {
+        "Label": "Visulisation",
+        "Icon": "settings_input_svideo",
+        "Children": [
+          {
+            "Label": "Exemplaire",
+            "href": "/admin/circulation/Visualiser/Exemplaire"
+          },
+          {
+            "Label": "Notice",
+            "href": "/admin/circulation/Visualiser/Notice"
+          }
+        ]
+      },
+      {
+        "Label": "Suggestion",
+        "Icon": "lightbulb_outline",
+        "Children": [
+          {
+            "Label": "Suggestion",
+            "href": "/admin/circulation/Suggestions"
+          }
+        ]
+      }
+    ]
+  },
+  "dsi": {
+    "label": "Dsi",
+    "menu": []
+  },
+  "edition": {
+    "label": "Edition",
+    "menu": [
+      {
+        "Label": "Reports",
+        "Icon": "search",
+        "Children": [
+          {
+            "Label": "Customizable",
+            "href": "/admin/edition/customizable"
+          },
+          {
+            "Label": "Configurable",
+            "href": "/admin/edition/configurable"
+          }
+        ]
+      },
+      {
+        "Label": "Loans",
+        "Icon": "settings_input_svideo",
+        "Children": [
+          {
+            "Label": "Current Loans",
+            "href": "/admin/edition/currentLoans"
+          },
+          {
+            "Label": "Delay by Reader",
+            "href": "/admin/edition/delayByReader"
+          },
+          {
+            "Label": "Delay by Date",
+            "href": "/admin/edition/delayByDate"
+          },
+          {
+            "Label": "Loan Group",
+            "href": "/admin/edition/loanGroup"
+          },
+          {
+            "Label": "Delay by Group",
+            "href": "/admin/edition/delayByGroup"
+          }
+        ]
+      },
+      {
+        "Label": "Reservations",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "In Progress",
+            "href": "/admin/edition/inProgress"
+          },
+          {
+            "Label": "Treat",
+            "href": "/admin/edition/treat"
+          }
+        ]
+      },
+      {
+        "Label": "Readers",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "Current Readers",
+            "href": "/admin/edition/currentReaders"
+          },
+          {
+            "Label": "End of Subscription",
+            "href": "/admin/edition/endOfSubscription"
+          },
+          {
+            "Label": "Subscription Exceed",
+            "href": "/admin/edition/subscriptionExceed"
+          },
+          {
+            "Label": "Category to Change",
+            "href": "/admin/edition/categoryToChange"
+          }
+        ]
+      },
+      {
+        "Label": "Periodic",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Collection Stat",
+            "href": "/admin/edition/collectionStat"
+          },
+          {
+            "Label": "Circulation Stat",
+            "href": "/admin/edition/circulationStat"
+          },
+          {
+            "Label": "Simplified Circulation",
+            "href": "/admin/edition/simplifiedCirculation"
+          }
+        ]
+      },
+      {
+        "Label": "BarCode",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Free Generated",
+            "href": "/admin/edition/freeGenerated"
+          }
+        ]
+      },
+      {
+        "Label": "Labels",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Patterns Of Stickers Sheets",
+            "href": "/admin/edition/patternsOfStickersSheets"
+          }
+        ]
+      },
+      {
+        "Label": "Templates",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Notices",
+            "href": "/admin/edition/notices"
+          },
+          {
+            "Label": "Circulation List",
+            "href": "/admin/edition/circulationList"
+          },
+          {
+            "Label": "Banners",
+            "href": "/admin/edition/banners"
+          }
+        ]
+      },
+      {
+        "Label": "OPAC",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Mail Campaign",
+            "href": "/admin/edition/mailCampaign"
+          }
+        ]
+      }
+    ]
+  },
+  "register": {
+    "label": "Register",
+    "menu": []
+  },
+  "reporting": {
+    "label": "Catalogue",
+    "menu": []
+  }
+}

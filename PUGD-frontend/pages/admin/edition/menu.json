@@ -1,0 +1,147 @@
+{
+    "label": "Edition",
+    "menu": [
+      {
+        "Label": "Reports",
+        "Icon": "search",
+        "Children": [
+          {
+            "Label": "Customizable",
+            "href": "/admin/edition/customizable"
+          },
+          {
+            "Label": "Configurable",
+            "href": "/admin/edition/configurable"
+          }
+        ]
+      },
+      {
+        "Label": "Loans",
+        "Icon": "settings_input_svideo",
+        "Children": [
+          {
+            "Label": "Current Loans",
+            "href": "/admin/edition/currentLoans"
+          },
+          {
+            "Label": "Delay by Reader",
+            "href": "/admin/edition/delayByReader"
+          },
+          {
+            "Label": "Delay by Date",
+            "href": "/admin/edition/delayByDate"
+          },
+          {
+            "Label": "Loan Group",
+            "href": "/admin/edition/loanGroup"
+          },
+          {
+            "Label": "Delay by Group",
+            "href": "/admin/edition/delayByGroup"
+          }
+        ]
+      },
+      {
+        "Label": "Reservations",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "In Progress",
+            "href": "/admin/edition/inProgress"
+          },
+          {
+            "Label": "Treat",
+            "href": "/admin/edition/treat"
+          }
+        ]
+      },
+      {
+        "Label": "Readers",
+        "Icon": "spellcheck",
+        "Children": [
+          {
+            "Label": "Current Readers",
+            "href": "/admin/edition/currentReaders"
+          },
+          {
+            "Label": "End of Subscription",
+            "href": "/admin/edition/endOfSubscription"
+          },
+          {
+            "Label": "Subscription Exceed",
+            "href": "/admin/edition/subscriptionExceed"
+          },
+          {
+            "Label": "Category to Change",
+            "href": "/admin/edition/categoryToChange"
+          }
+        ]
+      },
+      {
+        "Label": "Periodic",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Collection Stat",
+            "href": "/admin/edition/collectionStat"
+          },
+          {
+            "Label": "Circulation Stat",
+            "href": "/admin/edition/circulationStat"
+          },
+          {
+            "Label": "Simplified Circulation",
+            "href": "/admin/edition/simplifiedCirculation"
+          }
+        ]
+      },
+      {
+        "Label": "BarCode",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Free Generated",
+            "href": "/admin/edition/freeGenerated"
+          }
+        ]
+      },
+      {
+        "Label": "Labels",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Patterns Of Stickers Sheets",
+            "href": "/admin/edition/patternsOfStickersSheets"
+          }
+        ]
+      },
+      {
+        "Label": "Templates",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Notices",
+            "href": "/admin/edition/notices"
+          },
+          {
+            "Label": "Circulation List",
+            "href": "/admin/edition/circulationList"
+          },
+          {
+            "Label": "Banners",
+            "href": "/admin/edition/banners"
+          }
+        ]
+      },
+      {
+        "Label": "OPAC",
+        "Icon": "settings_applications",
+        "Children": [
+          {
+            "Label": "Mail Campaign",
+            "href": "/admin/edition/mailCampaign"
+          }
+        ]
+      }
+    ]
+  }

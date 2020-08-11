@@ -1,0 +1,580 @@
+db.createCollection("records", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "title", "recYear"],
+         properties: {
+            isbn: {
+               bsonType: "int",
+               description: "must be an Integer if the field exists"
+            },
+            title: {
+               bsonType: "String",
+               description: "must be a String and is required"
+            },
+            otherTitle: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            parallel_title: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            recYear: {
+               bsonType: "int",
+               minimum: 1017,
+               maximum: 3017,
+               description: "must be an integer in [ 1017, 3017 ]  and is required"
+            },
+            edditionStatment: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            OtherInformations: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            format: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+
+            summary: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            isNew: {
+               bsonType: "Boolean",
+               description: "must be True or False"
+            },
+            IsNum: {
+               bsonType: "Boolean",
+               description: "must be True or False"
+            },
+            AccMaterial: {
+               bsonType: "String",
+               description: "must be a String and is required"
+            },
+            NoteAuthor: {
+               bsonType: "String",
+               description: "must be a String and is required"
+            },
+            NbPages: {
+               bsonType: "int",
+               description: "must be a Integer and is required"
+            },
+            FK_Series: {
+                  bsonType: "String",
+                  description: "this field is a foreign key of a function and it must be a integer and is required"
+               },
+            FK_Sub_Series: {
+                  bsonType: "String",
+                  description: "this field is a foreign key of a function and it must be a integer and is required"
+               },
+            Baskets: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a Basket "
+                 }
+              },
+              Language: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a language "
+                 }
+              },
+              Original_language: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a Original_language "
+                 }
+              },
+              Key_words: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a Key_words "
+                 }
+              },
+              Category: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a Category "
+                 }
+              },
+              Branches: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                    bsonType: ["string"],
+                    description: "this field is a foreign key of a Branches "
+                 }
+              },
+            Copy: {
+               bsonType: "object",
+               required: [ "BareCode" ],
+               properties: {
+                  BareCode: {
+                     bsonType: "string",
+                     description: "must be a string and is required"
+                  },
+                  price: {
+                     bsonType: "Double",
+                     description: "must be a double if the field exists"
+                  },
+                  ReplacementPrice: {
+                     bsonType: "Double",
+                     description: "must be a double if the field exists"
+                  },
+                  DateLastBorroweed: {
+                     bsonType: "Date",
+                     description: "must be a Date  if the field exists"
+                  },
+                  DateLastSeen: {
+                     bsonType: "Date",
+                     description: "must be a Date  if the field exists"
+                  },
+                  Stack: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  NoteForLoan: {
+                     bsonType: "Boolean",
+                     description: "must be True or False"
+                  },
+                  WithDrawn: {
+                     bsonType: "Boolean",
+                     description: "must be True or False"
+                  },
+                  Reserves: {
+                     bsonType: "int",
+                     description: "must be a integer if the field exists"
+                  },
+                  Restricted: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  CopyNumber: {
+                     bsonType: "int",
+                     description: "must be a integer if the field exists"
+                  },
+                  NewStatus: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  Reserves: {
+                  bsonType: "object",
+                  properties: { ... }
+
+                  Loans: {
+                  bsonType: "object",
+                  properties: { ... }
+               }
+            }
+            Serial: {
+               bsonType: "object",
+               properties: {
+                  status: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  SerialX: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  SerialY: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  SerialZ: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+                  ClaimCount: {
+                     bsonType: "int",
+                     description: "must be a integer  if the field exists"
+                  },
+                  ClaimDate: {
+                     bsonType: "date",
+                     description: "must be a date if the field exists"
+                  },
+                  RoutingNotes: {
+                     bsonType: "string",
+                     description: "must be a string if the field exists"
+                  },
+               }
+            }
+            Resposabilities: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                  required: [ "FK_Auther","FK_Function" ],
+                  bsonType: "object",
+                  properties: {
+                     FK_Auther: {
+                        bsonType: "string",
+                        description: "this field is a foreign key of an auther and it must be a integer and is required"
+                     },
+                     FK_Function: {
+                        bsonType: "string",
+                        description: "this field is a foreign key of a function and it must be a integer and is required"
+                     },
+               }
+            }
+         }
+          Publishers: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                  bsonType: "string",
+                  description: "this field is a foreign key of a Publisher and it must be a integer and is required"
+                     },
+
+               }
+            }
+         }
+
+         }
+      }
+   }
+})
+
+db.createCollection("baskets", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+                        required: [ "type_basket","name_basket" ],
+                  bsonType: "object",
+                  properties: {
+                     type_basket: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                     },
+                     name_basket: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                     },
+                     note_basket: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     date_basket: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     classement_basket: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     sorting_basket: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   },
+                   copy: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a copy and it must be a integer and is required"
+                         },
+
+                   }
+                 }
+             }
+         }
+
+
+
+
+db.createCollection("shelves", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "name"],
+         properties: {
+          name: {
+               bsonType: "String",
+               description: "must be a string and is required"
+            },
+            validate_shv: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            val_date_debut: {
+               bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+            val_date_end: {
+               bsonType: "date",
+               description: "must be a date if the field exists"
+            },
+            sorting: {
+               bsonType: "String",
+               description: "must be a String if the field exists"
+            },
+            id_tri: {
+               bsonType: "int",
+               description: "must be an intiger if the field exists"
+            },
+            basket: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                  bsonType: "int",
+                  description: "this field is a foreign key of a baskets and it must be a integer and is required"
+                     },
+               }
+
+
+         }
+     }
+ }
+}
+db.createCollection("Libraries", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "name", "address"],
+         properties: {
+
+
+           branches: {
+                bsonType: ["array"],
+                minItems: 1, 
+                uniqueItems: true,
+                additionalProperties: false,
+                items: {
+                  required: [ "branchName","branchZip" ],
+                  bsonType: "object",
+                  properties: {
+                     branchName: {
+                        bsonType: "string",
+                        description: "must be a string and is required"
+                     },
+                     branchZip: {
+                        bsonType: "int",
+                        description: "must be an integer and is required"
+                     },
+                     branchCity: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     branchState: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     branchCountry: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     BranchFax: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     BranchPhone: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     BranchUrl: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     BranchIp: {
+                        bsonType: "int",
+                        description: "must be a integer if the field exists"
+                     },
+                     GeoLocation: {
+                        bsonType: "string",
+                        description: "must be a string if the field exists"
+                     },
+                     records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   }
+                 }
+              }
+           }
+
+         }
+     }
+ }
+}
+db.createCollection("uniform_titles", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "title", "recYear"],
+         properties: {
+          title: {
+                bsonType: "string",
+                description: "must be a string and is required"
+                     },
+            recYear: {
+                bsonType: "int",
+               minimum: 1017,
+               maximum: 3017,
+               description: "must be an integer in [ 1017, 3017 ]  and is required"
+             },
+          records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   }
+
+         }
+     }
+ }
+}
+
+db.createCollection("keywors", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "word", "lang"],
+         properties: {
+          word: {
+                bsonType: "string",
+                description: "must be a string and is required"
+                     },
+            lang: {
+                bsonType: "int",
+                description: "must be a integer and is required"
+             },
+             records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   }
+
+
+         }
+     }
+ }
+}
+db.createCollection("language", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "value"],
+         properties: {
+          value: {
+                bsonType: "string",
+                description: "must be a string and is required"
+                     },
+
+             records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   }
+
+
+         }
+     }
+ }
+}
+db.createCollection("categories", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "name",
+         properties: {
+          name: {
+                bsonType: "string",
+                description: "must be a string and is required"
+                     },
+
+          records: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a record and it must be a integer and is required"
+                         },
+
+                   }
+                  gategory: {
+                    bsonType: ["array"],
+                    minItems: 1, 
+                    uniqueItems: true,
+                    additionalProperties: false,
+                    items: {
+                      bsonType: "string",
+                      description: "this field is a foreign key of a category and it must be a integer and is required"
+                         },
+
+                   }
+
+         }
+         
+
+     }
+ }
+}

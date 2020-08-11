@@ -1,0 +1,106 @@
+{
+  "label": "Circulation",
+  "menu": [
+    {
+      "Label": "Circulation",
+      "Icon": "home",
+      "Children": [
+        {
+          "Label": "Prêt de documents",
+          "href": "/admin/circulation/Circulation/pret_document"
+        },
+        {
+          "Label": "Retour de documents",
+          "href": "/admin/circulation/Circulation/retour_Document"
+        },
+        {
+          "Label": "Documents À traiter",
+          "href": "/admin/circulation/Circulation/taritDoc"
+        },
+  
+        {
+          "Label": "Groupes de lecteurs",
+          "href": "/admin/circulation/Circulation/groups"
+        },
+        {
+          "Label": "Nouveau (Borrowers) lecteur",
+          "href": "/admin/circulation/Circulation/Borrowers"
+        },
+        {
+          "Label": "Périodiques",
+          "href": "/admin/circulation/Circulation/periodique"
+        },
+        {
+          "Label": "Recharch Personalisé",
+          "href": "/admin/circulation/Circulation/recharch"
+        }
+      ]
+    },
+    {
+      "Label": "Paniers",
+      "Icon": "shopping_basket",
+      "Children": [
+        {
+          "Label": "Author",
+          "href": "/admin/Circulation/author"
+        },
+        {
+          "Label": "headings",
+          "href": "/admin/Circulation/headings"
+        },
+        {
+          "Label": "Publisher",
+          "href": "/admin/Circulation/publisher"
+        },
+        {
+          "Label": "Series",
+          "href": "/admin/Circulation/series"
+        },
+        {
+          "Label": "Sub-series",
+          "href": "/admin/Circulation/sub_series"
+        },
+        {
+          "Label": "Collection Title",
+          "href": "/admin/Circulation/collection_title"
+        },
+        {
+          "Label": "Uniform Titles",
+          "href": "/admin/Circulation/uniform-titles"
+        },
+        {
+          "Label": "Class number",
+          "href": "/admin/Circulation/class_number"
+        }
+      ]
+    },
+    {
+      "Label": "Réservations",
+      "Icon": "spellcheck",
+      "Children": [
+        {
+          "Label": "Reservation Encour",
+          "href": "/admin/Circulation/Reservation/En_cour"
+        },
+        {
+          "Label": "Reservation depassé",
+          "href": "/admin/Circulation/Reservation/Depasse"
+        }
+      ]
+    },
+    {
+      "Label": "Visulisation",
+      "Icon": "settings_input_svideo",
+      "Children": [
+        {
+          "Label": "Management",
+          "href": "/admin/Circulation/Visulaliser/Exemplaire"
+        },
+        {
+          "Label": "Collection",
+          "href": "/admin/Circulation/Visulaliser/Notice"
+        }
+      ]
+    }
+  ]
+}

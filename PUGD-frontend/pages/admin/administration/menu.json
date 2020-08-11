@@ -1,0 +1,28 @@
+{
+  "label": "Administration",
+  "menu": [
+    {
+      "Label": "items",
+      "Icon": "add",
+      "Children": [
+        {
+          "Label": "Owner",
+          "href": "/admin/administration/Owner"
+        },
+        {
+          "Label": "Status",
+          "href": "/admin/administration/Status"
+        },
+        {
+          "Label": "Media Types",
+          "href": "/admin/administration/MediaTypes"
+        },
+        {
+          "Label": "Code Static",
+          "href": "/admin/administration/codeStatic"
+        }
+
+      ]
+    }
+  ]
+}

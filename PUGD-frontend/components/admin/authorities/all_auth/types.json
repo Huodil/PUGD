@@ -1,0 +1,34 @@
+{
+  "AuthorTypeOutput": {
+    "icon": "person",
+    "type_name": "author"
+  },
+  "CategoryType": {
+    "icon": "subject",
+    "type_name": "category"
+  },
+  "PublisherType": {
+    "icon": "person",
+    "type_name": "publisher"
+  },
+  "ClassNumberType": {
+    "icon": "person",
+    "type_name": "class_number"
+  },
+  "SubSeriesType": {
+    "icon": "person",
+    "type_name": "sub_series"
+  },
+  "SeriesType": {
+    "icon": "person",
+    "type_name": "series"
+  },
+  "UniformTitleTypeAuthorities": {
+    "icon": "person",
+    "type_name": "uniform_titles"
+  },
+  "CollectionTitle": {
+    "icon": "person",
+    "type_name": "collection_titles"
+  }
+}

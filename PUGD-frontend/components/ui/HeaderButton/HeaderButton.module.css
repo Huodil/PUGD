@@ -1,0 +1,14 @@
+.my_button {
+    color: white !important;
+    border-radius: 0 !important;
+    min-width:52px !important;
+    padding:0 !important;
+}
+
+.my_button:focus {
+    background-color: transparent;
+}
+
+.my_button:first-child {
+    height: 64px !important;
+}

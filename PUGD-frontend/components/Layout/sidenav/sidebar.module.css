@@ -1,0 +1,59 @@
+.sidebar_dropdown {
+    background: white;
+    color: rgba(0, 0, 0, .87);
+    line-height: 44px !important;
+    height: 44px;
+}
+
+.sidebar_dropdown:hover {
+    background-color: rgba(0, 0, 0, .035)!important;
+}
+
+.sidebar_list {
+    padding: 0 0 0 24px;
+    margin-right: 1.15rem !important;
+    line-height: 44px !important;
+    height: 44px !important;
+    color: rgba(0, 0, 0, 0.87);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.sidebar_list:hover {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.sidebar_list_active {
+    background: linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+    box-shadow: 3px 3px 20px 0 rgba(255, 110, 64, .5) !important;
+    color: white !important;
+}
+
+.sidebar_list_icon {
+    font-size: 11px !important;
+    color: rgba(0, 0, 0, .54);
+    margin-right: 20px !important;
+}
+.sidebar_list_active .sidebar_list_icon {
+    color:white !important
+}
+
+.expanssion_panel {
+    box-shadow: none !important;
+    margin: 0;
+}
+
+.expanssion_panel_summary {
+    min-height: 44px !important;
+    line-height: 44px !important;
+}
+
+.selected{
+    margin: 0;
+    background: -webkit-linear-gradient(45deg, #8e24aa, #ff6e40);
+    background: linear-gradient(45deg, #8e24aa, #ff6e40);
+    box-shadow: 3px 3px 20px 0 rgba(255, 110, 64, .5);
+    margin-right: 1.15rem;
+    color: #fff !important;
+    border-radius: 0 25px 25px 0;
+  }

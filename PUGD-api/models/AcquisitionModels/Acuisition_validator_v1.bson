@@ -1,0 +1,143 @@
+db.createCollection("order", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "_id","name","financial_year", "provider","date","status","order_line","currency"],
+         properties: {
+           _id:{
+             bsonType: "string",
+             description: "primary key and is required"
+           }
+           name: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            status: {
+               enum: [ "pending", "current", "settled", "filed", "received" ],
+               description: "can only be one of the enum values and is required"
+            },
+            type_order{
+               enum: [ "quotation", "order" ],
+               description: "can only be one of the enum values and is required"
+            },
+            provider: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            financial_year: {
+               bsonType: "int",
+               minimum: 2017,
+               maximum: 3017,
+               description: "must be an integer in [ 2017, 3017 ] and is required"
+            },
+            date: {
+               bsonType: "int",
+               minimum: 2017,
+               maximum: 3017,
+               description: "must be an integer in [ 2017, 3017 ] and is required"
+            },
+            delivery_address: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+            billing_address: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+            note: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+            printed_note: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+            ttc: {
+               bsonType: "int",
+               description: "must be an integer"
+            },
+            currency: {
+               bsonType: "int",
+               description: "must be an integer and is required"
+            },
+            order_line: {
+                        bsonType: ["array"],
+                        minItems: 1, 
+                        uniqueItems: false,
+                        additionalProperties: false,
+                        items: {
+                          bsonType: "string",
+                          description: "this field is a foreign key of an order line and it must be a integer and is required"
+                             },
+                       }
+         }
+     }
+ }
+}
+
+db.createCollection("order_line", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["FK_order","FK_provider","isbn","title","quantity","status"],
+         properties: {
+          _id:{
+             bsonType: "string",
+             description: "primary key and is required"
+           },
+          FK_provider: {
+                  bsonType: "string",
+                  description: "this field is a foreign key of a provider and it must be a integer and is required"
+               },
+          FK_order: {
+                  bsonType: "string",
+                  description: "this field is a foreign key of a order and it must be a integer and is required"
+               },
+          isbn: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+          title: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+          author: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+          note: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+          publisher: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+          series: {
+               bsonType: "string",
+               description: "must be a string"
+            },
+          quantity: {
+               bsonType: "int",
+               description: "must be an integer and is required"
+            },
+          net_price: {
+               bsonType: "int",
+               description: "must be an integer"
+            },
+          discount: {
+               bsonType: "int",
+               description: "must be an integer"
+            },
+          budget: {
+               bsonType: "int",
+               description: "must be an integer"
+            }, 
+          status{
+               enum: ["pending","received", "saved" ],
+               description: "can only be one of the enum values and is required"
+            }      
+         }
+      }
+   }
+}

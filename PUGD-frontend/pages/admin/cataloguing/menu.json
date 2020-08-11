@@ -1,0 +1,53 @@
+{
+  "label": "Catalogue",
+  "menu": [
+{
+    "Label": "Search",
+    "Icon": "search",
+    "Children": [
+      {
+        "Label": "All Libraries",
+        "href": "/admin/cataloguing/Library/libraries"
+    },
+    {
+        "Label": "All Branches",
+        "href": "/admin/cataloguing/Branch/branches"
+    },
+    {
+        "Label": "All Records",
+        "href": "/admin/cataloguing/Record/Records"
+    },
+    {
+        "Label": "All Copies",
+        "href": "/admin/cataloguing/Copy/copies"
+    },
+
+    {
+        "Label": "All Serials",
+        "href": "/admin/cataloguing/Serial/Serials"
+    },
+    {
+        "Label": "All KeyWords",
+        "href": "/admin/cataloguing/KeyWord/KeyWords"
+    },
+    {
+        "Label": "All Languages",
+        "href": "/admin/cataloguing/Language/Languages"
+    }
+
+    ]
+  },
+  {
+    "Label": "External",
+    "Icon": "settings_applications",
+    "Children": [
+      {
+        "Label": "Z39.50 ",
+        "href": "/admin/cataloguing/index"
+    }
+   
+
+    ]
+  }
+  ]
+}

@@ -1,0 +1,152 @@
+import gql from 'graphql-tag';
+
+const GET_RECORD = gql`
+query($Id : String!){
+  record(id : $Id){
+    ISBN
+    Title
+    OtherTitle
+    ParallelTitle
+    RecYear
+    EditionStatement
+    OtherInformations
+    Format
+    Type
+    Price
+    Summary
+    NoteOnContents
+    ItemStatus
+    IsNew
+    IsNum
+    AccMaterial
+    NoteAuthor
+    NbPages
+    FkSeries{
+      title
+      _id
+    }
+    FkSubSeries{
+      name
+      _id
+    }
+    Language{
+      _id
+      Value
+    }
+    OriginalLanguage{
+      _id
+      Value
+    }
+    KeyWords{
+      _id
+      Word
+    }
+    Branches{
+      _id
+      BranchName
+    }
+    Category{
+      _id
+      name
+    }
+    Publishers{
+      _id
+      name
+    }
+    OtherPublishers{
+      _id
+      name
+    }
+    ClassNumber{
+      _id
+      name
+    }
+    CollectionTitle{
+      _id
+      name
+    }
+    Responsibility{
+      Author{
+        _id
+        name_auth
+      }
+      Function{
+        _id
+        value
+      }
+    }
+  }
+}
+`;
+const GET_RECORD_ALL_FIELDS = gql`
+ 
+query($ISBN : String){
+  records(ISBN : $ISBN){
+    _id
+    ISBN
+    Title
+    OtherTitle
+    ParallelTitle
+    RecYear
+    EditionStatement
+    OtherInformations
+    Format
+    Summary
+    NoteOnContents
+    ItemStatus
+    IsNew
+    IsNum
+    Price
+    Type
+    AccMaterial
+    NoteAuthor
+    NbPages
+    FkSeries{
+      _id
+    }
+    FkSubSeries{
+      _id
+    }
+    Language{
+      _id
+    }
+    OriginalLanguage{
+      _id
+    }
+    KeyWords{
+      _id
+    }
+    Branches{
+      _id
+    }
+    Publishers{
+      _id
+    }
+    OtherPublishers{
+      _id
+    }
+    ClassNumber{
+      _id
+    }
+    Category{
+      _id
+    }
+    CollectionTitle{
+      _id
+    }
+    Responsibility{
+      Author{
+        _id
+        name_auth
+      }
+      Function{
+        _id
+      }
+    }
+  }
+}
+`;
+module.exports = {
+  GET_RECORD: GET_RECORD,
+  GET_RECORD_ALL_FIELDS: GET_RECORD_ALL_FIELDS,
+}
